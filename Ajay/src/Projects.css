@@ -1,0 +1,119 @@
+/* Global section fade-in animation */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Projects {
+  background-color: #000; /* black background */
+  color: #fff;            /* white text */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#Projects h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#Projects p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.project {
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  /* filter: grayscale(0%); */
+  /* transition: filter 0.3s ease; */
+}
+
+.project img:hover {
+  /* filter: grayscale(100%); */
+    transform: scale(1.02);
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #Projects {
+    padding: 5rem 1rem 1rem 1rem;
+  }
+
+  .project {
+    max-width: 90%;
+  }
+
+  .project h3 {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.85rem;
+  }
+
+  .project a {
+    font-size: 0.85rem;
+  }
+}

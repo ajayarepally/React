@@ -1,0 +1,123 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: #ffffff; /* white background */
+  color: #121212; /* almost black text */
+}
+
+/* Header Styling */
+.App-header {
+  background: rgba(50, 50, 50, 0.85); /* dark translucent bg */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #eee; /* light text */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo/Brand */
+.App-logo h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #f0f0f0; /* light gray */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+.App-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.App-links > a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.App-links > a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #eee; /* underline in light gray */
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.App-links > a:hover {
+  color: #fff; /* pure white on hover */
+  transform: scale(1.05);
+}
+
+.App-links > a:hover::after {
+  width: 100%;
+}
+
+
+.App-about {
+  color: white; /* white text */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 80px; /* avoid overlap with header */
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+
+  /* animation */
+  opacity: 0;
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.App-languages{
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .App-links {
+    flex-wrap: wrap;
+    gap: 0rem;
+  }
+}
