@@ -11,14 +11,14 @@ function App() {
     <div className="App-header">
       <div className="App-logo"><h1>Portfolio</h1></div>
       <div className="App-links">
-      <a href="#" target="_self">Home</a>
+      <a href="#Home" target="_self">Home</a>
       <a href="#About" target="_self">About</a>
       <a href="#Languages" target="_self">Languages</a>
       <a href="#Projects" target="_self">Projects</a>
       <a href="#Contact" target="_self">Contact</a>
       </div>
     </div>
-    <div className="App-body">
+    <div className="App-body" id="Home">
       <Home />
     </div>
     <div className="App-about" id="About">

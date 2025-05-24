@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     background: linear-gradient(135deg, #000000, #222222, #444444);
-    background-size: 400% 400%;
+    /* background-size: 400% 400%; */
     animation: gradient 15s ease infinite;
     margin: 0;
     padding: 0;
@@ -18,15 +18,21 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100vh;
-    padding: 2rem;
+    padding: 5rem;
     gap: 4rem;
     backdrop-filter: blur(6px);
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 12px;
     animation: fadeIn 1.2s ease-in-out;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    
+}
+.Home-image img{
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
 }
 
 #Home h1 {
@@ -43,22 +49,6 @@ body {
     line-height: 1.6;
     max-width: 600px;
     animation: slideInRight 0.8s ease-out;
-}
-
-/* Image */
-.Home-img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
-    filter: grayscale(100%);
-}
-
-.Home-img:hover {
-    transform: scale(1.05);
-    filter: grayscale(0%);
 }
 
 /* Animations */
@@ -116,11 +106,12 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 7rem 1rem 0rem 1rem;
+    padding: 3rem 1rem 0rem 1rem;
     text-align: center;
     overflow: hidden;
     z-index: 1;
     color: white; /* Optional: text color */
+    
 }
 
 #Home::before {
@@ -131,24 +122,24 @@ body {
     background: url("https://img.freepik.com/premium-photo/hacker-typing-computer-concept-cybercrime-cyberattack-dark-web-ai-generated_970271-196.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(8px); /* Adjust blur strength here */
+    filter: blur(5px); /* Adjust blur strength here */
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.7; /* Adjust opacity here */
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 
     .Home-image > img {
-        display: none;
-        max-width: 100%;
+        /* display: none; */
+        max-width: 50%;
     }
 
     #Home h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     #Home p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
