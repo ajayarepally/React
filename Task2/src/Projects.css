@@ -1,0 +1,47 @@
+/* Section Container */
+.section {
+  padding: 80px 60px;
+  width: 100%;
+}
+.section h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.project-card {
+  position: relative;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.project-card .label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+@media (max-width:768px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .project-card .label {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
