@@ -1,5 +1,5 @@
 import React from 'react'
-import { products } from './data'
+import { products } from './ProductData'
 import Product from './Product'
 const Products = () => {
   return (

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import "./Recipes.css"
-import { recipes } from './data'
+import { recipes } from './RecipesData'
 import Recipe from './Recipe'
 const Recipes = () => {
   return (
