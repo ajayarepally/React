@@ -1,0 +1,60 @@
+.navbar {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.nav_links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Icon Styles */
+.cartIcon, .favIcon {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.cartIcon:hover, .favIcon:hover {
+    color: red;
+}
+
+/* Link Styles */
+.nav_link {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+    color: red;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stacks items on smaller screens */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cartIcon, .favIcon {
+        font-size: 1.2rem; /* Adjusts icon size for mobile */
+    }
+
+    .nav_link {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,19 @@
+
+.recipesHeading{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+.recipeSingle{
+    /* width: 100%; */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.recipeSingle > img {
+    width: 100%;
+}
+.recipeSingle > h1{
+    font-size: 1.6rem;
+}
