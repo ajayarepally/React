@@ -1,0 +1,71 @@
+.container {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.heading {
+  color: green;
+}
+
+.count {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.buttonRed {
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.buttonGreen {
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.buttonYellow {
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
+
+.span {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.buttonRed:hover {
+  background-color: rgb(219, 4, 4);
+  transform: scale(1.05);
+}
+
+.buttonGreen:hover {
+  background-color: rgb(1, 86, 1);
+  transform: scale(1.05);
+}
+
+.buttonYellow:hover {
+  background-color: rgb(243, 243, 57);
+  transform: scale(1.05);
+}
