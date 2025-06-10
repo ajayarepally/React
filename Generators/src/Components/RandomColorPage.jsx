@@ -1,16 +1,18 @@
-import Navbar from "./Navbar";
+import { useState } from "react";
 
 const RandomColorPage = () => {
-  const changeColor = () => {
-    const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-    document.body.style.backgroundColor = randomColor;
+  const [bgColor, setBgColor] = useState("#ffffff");
+
+  const generateRandomColor = () => {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    setBgColor(randomColor);
   };
 
   return (
-    <div className="page">
-      <Navbar />
+    <div className="page" style={{ backgroundColor: bgColor, minHeight: "100vh", padding: "2rem" }}>
       <h1>Random Color Generator</h1>
-      <button className="main-action" onClick={changeColor}>Generate Random Color</button>
+      <button onClick={generateRandomColor}>Generate Color</button>
+      <p>Current Color: <strong>{bgColor}</strong></p>
     </div>
   );
 };

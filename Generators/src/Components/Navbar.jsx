@@ -1,14 +1,13 @@
-const Navbar = () => {
-  const reloadTo = (path) => {
-    window.location.href = path;
-  };
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <button onClick={() => reloadTo('/')}>Random Color</button>
-      <button onClick={() => reloadTo('/quote')}>Random Quote</button>
-      <button onClick={() => reloadTo('/theme')}>Toggle Theme</button>
-      <button onClick={() => reloadTo('/signup')}>Signup</button>
+      <Link to="/">Random Color</Link>
+      <Link to="/quote">Random Quote</Link>
+      <Link to="/theme">Toggle Theme</Link>
+      <Link to="/signup">Signup</Link>
     </nav>
   );
 };

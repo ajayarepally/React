@@ -1,20 +1,24 @@
-import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
+import { useState } from "react";
 
 const ToggleThemePage = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    document.body.className = isDark ? "dark" : "light";
-  }, [isDark]);
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <div className="page">
-      <Navbar />
+    <div
+      className="page"
+      style={{
+        backgroundColor: darkMode ? "#111" : "#fff",
+        color: darkMode ? "#fff" : "#000",
+        minHeight: "100vh",
+        padding: "2rem"
+      }}
+    >
       <h1>Toggle Theme</h1>
-      <button className="main-action" onClick={() => setIsDark(!isDark)}>
-        Switch to {isDark ? "Light" : "Dark"} Theme
-      </button>
+      <button onClick={toggleTheme}>{darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}</button>
     </div>
   );
 };

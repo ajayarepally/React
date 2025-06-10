@@ -1,53 +1,25 @@
-import Navbar from "./Navbar";
 import { useState } from "react";
 
 const SignupPage = () => {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Welcome ${form.name}! You have signed up successfully.`);
+    alert(`Welcome, ${formData.name}! Signup successful.`);
   };
 
   return (
-    <div className="page">
-      <Navbar />
+    <div className="page" style={{ padding: "2rem", textAlign: "start" }}>
       <h1>Signup</h1>
-      <form onSubmit={handleSubmit} style={{ maxWidth: "400px", width: "100%" }}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          required
-          style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
-        />
-        <button type="submit" className="main-action" style={{ width: "100%" }}>
-          Sign Up
-        </button>
+      <form onSubmit={handleSubmit} style={{ maxWidth: "400px" }}>
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+        <button type="submit">Signup</button>
       </form>
     </div>
   );
